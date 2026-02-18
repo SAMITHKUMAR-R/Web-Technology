@@ -1,1 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>India State Information</title>
 
+<style>
+body{
+    font-family: Arial;
+    font-size: xx-large;
+    
+    text-align:center;
+    background:#f4f4f4;
+}
+
+img{
+    display:block;
+    margin:auto;
+}
+
+#infoBox{
+    margin-top:20px;
+    background:white;
+    padding:20px;
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:8px;
+    box-shadow:0 0 10px gray;
+}
+</style>
+
+<script>
+function showState(state){
+
+const info = {
+
+"Madhya Pradesh":
+["Capital: Bhopal",
+"Heart of India",
+"Khajuraho temples","Tiger reserves",
+"Rich tribal culture"],
+
+"Tamil Nadu":
+["Capital: Chennai",
+"Temple architecture",
+"IT hub",
+"Bharatanatyam dance",
+"Hill stations"],
+
+"Kerala":
+["Capital: Thiruvananthapuram",
+"Backwaters tourism",
+"Highest literacy",
+"Ayurveda treatments",
+"Lush greenery"],
+
+"Karnataka":
+["Capital: Bengaluru",
+"Silicon Valley of India",
+"Mysore Palace",
+"Coffee production",
+"Tech industries"],
+
+"Andhra Pradesh":
+["Capital: Amaravati",
+"Tirupati temple",
+"Rice production",
+"Long coastline",
+"Cultural heritage"],
+
+"Maharashtra":
+["Capital: Mumbai",
+"Financial capital",
+"Bollywood industry",
+"Ajanta caves",
+"Industrial growth"],
+
+"Gujarat":
+["Capital: Gandhinagar",
+"Birthplace of Gandhi",
+"Rann of Kutch",
+"Business hub",
+"Salt production"],
+
+"Rajasthan":
+["Capital: Jaipur",
+"Desert state",
+"Royal palaces",
+"Tourist forts",
+"Rajput history"],
+
+"Chhattisgarh":
+["Capital: Raipur",
+"Mineral rich",
+"Steel industries",
+"Dense forests",
+"Tribal population"],
+
+"Orissa":
+["Capital: Bhubaneswar",
+"Jagannath temple",
+"Odissi dance",
+"Coastal state",
+"Mineral resources"],
+
+"West Bengal":
+["Capital: Kolkata",
+"Durga Puja festival",
+"Sundarbans forest",
+"Tea plantations",
+"Literary culture"],
+
+"Assam":
+["Capital: Dispur",
+"Tea gardens",
+"One horn rhino",
+"Oil production",
+"Rich biodiversity"],
+
+"Jammu & Kashmir":
+["Capital: Srinagar",
+"Dal Lake",
+"Tourism paradise",
+"Snow mountains",
+"Handicrafts"],
+
+"Himachal Pradesh":
+["Capital: Shimla",
+"Hill tourism",
+"Apple farming",
+"Snow sports",
+"Himalayan beauty"],
+
+"Uttarakhand":
+["Capital: Dehradun",
+"Char Dham pilgrimage",
+"Ganga origin",
+"Yoga capital",
+"Mountain landscapes"],
+
+"Punjab":
+["Capital: Chandigarh",
+"Golden Temple",
+"Agriculture hub",
+"Punjabi cuisine",
+"Sikh heritage"],
+
+"Haryana":
+["Capital: Chandigarh",
+"Agriculture state",
+"Industrial zone",
+"Sports culture",
+"Delhi NCR influence"],
+
+"Delhi":
+["Capital of India",
+"Political centre",
+"Historic monuments",
+"Metro city",
+"Cultural diversity"],
+
+"Uttar Pradesh":
+["Capital: Lucknow",
+"Taj Mahal",
+"Most populous state",
+"Varanasi pilgrimage",
+"Mughal history"],
+
+"Bihar":
+["Capital: Patna",
+"Nalanda University",
+"Buddhist heritage",
+"Agricultural economy",
+"Historic sites"],
+
+"Jharkhand":
+["Capital: Ranchi",
+"Coal production",
+"Forest coverage",
+"Mineral rich",
+"Tribal population"],
+
+"Sikkim":
+["Capital: Gangtok",
+"Smallest state",
+"Organic farming",
+"Monasteries",
+"Himalayan peaks"],
+
+"Meghalaya":
+["Capital: Shillong",
+"Heavy rainfall",
+"Living root bridges",
+"Hill landscapes",
+"Tribal culture"],
+
+"Tripura":
+["Capital: Agartala",
+"Bamboo handicrafts",
+"Historic palace",
+"Tribal heritage",
+"Natural beauty"],
+
+"Arunachal Pradesh":
+["Capital: Itanagar",
+"Sunrise state",
+"Tribal diversity",
+"Mountain terrain",
+"Border state"],
+
+"Goa":
+["Capital: Panaji",
+"Beach tourism",
+"Portuguese culture",
+"Seafood cuisine",
+"Party destination"],
+
+"Nagaland":
+["Capital: Kohima",
+"Hornbill festival",
+"Tribal traditions",
+"Mountain region",
+"Cultural festivals"],
+
+"Mizoram":
+["Capital: Aizawl",
+"Hilly terrain",
+"High literacy",
+"Bamboo forests",
+"Tribal society"],
+
+"Manipur":
+["Capital: Imphal",
+"Loktak lake",
+"Manipuri dance",
+"Sports hub",
+"Hill beauty"]
+
+};
+
+let output = "<h2>"+state+"</h2><ul>";
+
+info[state].forEach(point=>{
+output += "<li>"+point+"</li>";
+});
+
+output += "</ul>";
+
+document.getElementById("infoBox").innerHTML = output;
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>India Map - Click a State</h1>
+
+<img src="india-map.jpg" usemap="#image-map">
+
+<map name="image-map">
+
+<area shape="poly" coords="415,913,432,857,470,744,513,766,497,820,561,776,575,668,653,628,691,663,677,726,793,953,472,953,690,726,917,772,833,894,790,953,542,977" href="#" onclick="showState('Madhya Pradesh')">
+
+<area shape="poly" coords="652,1498,784,1454,746,1633,698,1694,619,1770,579,1566" href="#" onclick="showState('Tamil Nadu')">
+
+<area shape="poly" coords="468,1492,571,1573,619,1773,576,1746" href="#" onclick="showState('Kerala')">
+
+<area shape="poly" coords="474,1247,431,1309,444,1357,439,1400,466,1484,522,1527,576,1543,625,1524,630,1473,673,1460,579,1433,579,1346,614,1290,614,1157" href="#" onclick="showState('Karnataka')">
+
+<area shape="poly" coords="671,1066,760,1077,778,1147,827,1171,951,1152,1024,1120,924,1230,846,1276,787,1309,781,1441,673,1484,646,1419,595,1422,592,1352,619,1284,630,1144" href="#" onclick="showState('Andhra Pradesh')">
+
+<area shape="poly" coords="331,1050,409,997,420,924,479,959,536,967,549,994,587,940,622,959,797,959,792,1086,676,1059,619,1150,401,1312" href="#" onclick="showState('Maharashtra')">
+
+<area shape="poly" coords="93,784,215,782,298,757,360,782,422,852,409,914,398,992,350,1035,323,900,296,976,220,1011,120,914,223,852,110,884" href="#" onclick="showState('Gujarat')">
+
+<area shape="poly" coords="385,425,288,560,196,560,150,636,236,746,360,765,433,841,449,771,482,733,525,782,563,792,579,728,555,706,582,663,641,620,584,552,528,566,476,471" href="#" onclick="showState('Rajasthan')">
+
+<area shape="poly" coords="835,1181,789,1119,824,927,921,800,970,814,1013,865,954,979,908,989,911,1051,870,1054,894,1116,873,1143" href="#" onclick="showState('Chhattisgarh')">
+
+<area shape="poly" coords="1001,906,1074,925,1128,898,1204,938,1177,992,1128,1051,1042,1108,939,1146,883,1154,885,1057,929,1051,923,1003" href="#" onclick="showState('Orissa')">
+
+<area shape="poly" coords="1118,856,1210,800,1234,689,1245,611,1283,613,1334,638,1323,675,1272,643,1253,694,1288,727,1245,767,1277,797,1285,880,1288,940,1210,934,1169,910" href="#" onclick="showState('West Bengal')">
+
+<area shape="poly" coords="1342,641,1571,617,1693,550,1698,593,1604,647,1552,701,1525,771,1488,784,1509,690,1453,687,1369,679,1350,703" href="#" onclick="showState('Assam')">
+
+<area shape="poly" coords="493,273,449,249,422,187,409,122,493,112,544,109,598,82,681,36,765,60,768,98,706,184,716,260,636,241,549,211" href="#" onclick="showState('Jammu & Kashmir')">
+
+<area shape="poly" coords="503,268,552,217,660,249,684,298,698,344,633,346,617,395,557,341,522,306" href="#" onclick="showState('Himachal Pradesh')">
+
+<area shape="poly" coords="630,395,646,349,700,346,751,362,816,400,784,452,773,514,706,476,679,443,646,454" href="#" onclick="showState('Uttarakhand')">
+
+<area shape="poly" coords="493,280,592,385,547,415,530,436,490,450,460,417,414,420,449,358,449,304" href="#" onclick="showState('Punjab')">
+
+<area shape="poly" coords="447,433,490,443,533,443,568,406,614,389,603,433,595,476,600,495,582,505,579,530,603,527,619,549,598,562,571,546,538,559,487,492" href="#" onclick="showState('Haryana')">
+
+<area shape="poly" coords="609,490,587,501,582,523,609,525,614,506" href="#" onclick="showState('Delhi')">
+
+<area shape="poly" coords="625,404,636,450,676,447,698,477,760,512,1010,628,1008,671,1035,701,997,701,970,722,967,765,954,798,924,787,916,744,867,736,684,711,711,644,646,612,606,555,630,517,611,471" href="#" onclick="showState('Uttar Pradesh')">
+
+<area shape="poly" coords="1032,797,1123,767,1147,786,1212,754,1231,705,1239,670,1037,605,1007,611,1026,646,1021,678,1042,700,1005,713,980,732,983,772" href="#" onclick="showState('Bihar')">
+
+<area shape="poly" coords="972,781,1117,775,1222,740,1201,802,1155,821,1125,829,1109,854,1158,902,1117,891,1071,918,1009,891,1009,843" href="#" onclick="showState('Jharkhand')">
+
+<area shape="poly" coords="1239,603,1241,557,1274,543,1290,562,1282,608" href="#" onclick="showState('Sikkim')">
+
+<area shape="poly" coords="1457,586,1613,473,1670,487,1697,460,1727,503,1724,541,1773,538,1764,600,1667,632,1700,551,1608,578,1576,621,1489,619" href="#" onclick="showState('Arunachal Pradesh')">
+
+<area shape="poly" coords="1550,715,1655,623,1663,672,1633,707" href="#" onclick="showState('Nagaland')">
+
+<area shape="poly" coords="1558,715,1631,710,1628,739,1601,804,1552,804,1536,758" href="#" onclick="showState('Manipur')">
+
+<area shape="poly" coords="1482,818,1490,780,1531,780,1552,804,1544,858,1536,904,1523,925,1498,925" href="#" onclick="showState('Mizoram')">
+
+<area shape="poly" coords="1479,778,1422,805,1430,856,1457,859,1479,816" href="#" onclick="showState('Tripura')">
+
+<area shape="poly" coords="1349,735,1371,684,1498,697,1489,737" href="#" onclick="showState('Meghalaya')">
+
+<area shape="poly" coords="396,1312,420,1307,436,1345,428,1369,409,1369" href="#" onclick="showState('Goa')">
+
+
+
+
+</map>
+
+<div id="infoBox">
+Click any state to see details
+</div>
+
+</body>
+</html>
